@@ -1,0 +1,9 @@
+*.pyc
+/.vscode
+myvenv
+db.sqlite3
+.DS_Store
+Pipfile
+pipfile.lock
+/static
+/pt_tool.egg-info

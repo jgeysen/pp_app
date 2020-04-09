@@ -1,0 +1,67 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h2>Detailed view of use case: {{project.use_case_name}}</h2>
+<p>
+{{project.description}}
+</p>
+<h4>
+Owner:
+</h4>
+<p>
+{{project.owner}}
+</p>
+<h4>
+Sponsor:
+</h4>
+<p>
+{{project.sponsor}}
+</p>
+<h4>
+Directorate:
+</h4>
+<p> 
+{{project.directorate}}
+</p>
+<h4>
+Time estimate:
+</h4>
+<p> 
+{{project.timeline}} months
+</p>
+<h4>
+Cost estimate:
+</h4>
+<p>
+£ {{project.cost}}
+</p>
+<h4>
+Stakeholder benefits:
+</h4>
+<p>
+{{project.stake_benefits}}
+</p>
+<h4>
+Use case benefits:
+</h4>
+<p>
+{{project.use_case_benefits}}
+</p>
+<h4>
+Customer alignment strategy
+</h4>
+<p>
+{{project.strat_customer}}
+</p>
+<h4>
+Safety alignment strategy
+</h4>
+<p>
+{{project.strat_safety}}
+</p>
+<h4>
+Delivery alignment strategy
+</h4>
+<p>
+{{project.strat_deliver}}
+</p>
+{% endblock %}

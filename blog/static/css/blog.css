@@ -1,0 +1,40 @@
+.page-header {
+    background-color: #808080;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 25pt;
+}   
+
+h1 a,h2 a {
+    font-family:"Roboto";
+}
+
+.content {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 100px;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.top-menu {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+

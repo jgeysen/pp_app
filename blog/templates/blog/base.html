@@ -1,0 +1,61 @@
+{% load static %}
+<html lang="en">
+
+<head>
+<title>Project prioritisation tool</title>
+
+<meta charset="utf-8">
+        
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" type="text/css">
+
+<style>
+p{
+    font-size:11px;
+}
+h4{
+    font-size: 15px;
+}
+h3{
+    font-size: 17px;
+}
+h2{
+    font-size: 19px;
+}
+h1{
+    font-size: 21px;
+}
+.btn-primary a {
+  color: #fafafa;
+  margin: 0px;
+  text-decoration: none;
+}
+</style>
+
+</head>
+
+    <body>
+        <div class="page-header" style="padding:20px 55px">
+            <h1 style="font-family:Roboto"><img src="{% static 'images/HE.png' %}" width="100"/>
+            <a href="{% url 'project_list' %}" style="text-decoration:none">PROJECT PRIORITISATION TOOL</a></h1>
+        </div>
+
+        
+        <div style="padding:10px 55px">
+        <button type="button" class="btn btn-primary"><a href="{% url 'project_list' %}">Gate 0</a></button>
+        <button type="button" class="btn btn-primary">Gate 1</button>
+        <button type="button" class="btn btn-primary">Gate 2</button>
+        </div>
+        
+
+        <div class="content container">
+                    {% block content %}
+                    {% endblock %}
+        </div>
+    </body>
+</html>

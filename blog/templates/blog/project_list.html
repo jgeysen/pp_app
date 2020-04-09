@@ -1,0 +1,63 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<head>
+<style>
+table{
+  font-family: arial;
+  font-size: 12px;
+}
+
+th{
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.btn-primary a {
+  color: #fafafa;
+}
+</style>
+</head>
+<div>
+  <table class="table table-striped">
+  <col width="10%">
+  <col width="40%">
+  <col width="10%">
+  <col width="10%">
+  <col width="10%"> 
+  <col width="10%">
+  <col width="10%"> 
+   <thead class="thead-dark">
+    <tr>
+      <th style="text-align:center">Name</th>
+      <th style="text-align:center">Description</th>
+      <th style="text-align:center">Owner</th>
+      <th style="text-align:center">Sponsor</th>
+      <th style="text-align:center">Directorate</th>
+      <th style="text-align:center">Timeline</th>
+      <th style="text-align:center">Cost</th>
+    </tr>
+   </thead>
+   <tbody>
+      {% for project in projects %}
+    <tr>
+      <td style="text-align:center"><a href="{% url 'project_detail' pk=project.pk %}">{{project.use_case_name}}</a></td>
+      <td>{{project.description}}</td>
+      <td style="text-align:center">{{project.owner}}</td>
+      <td style="text-align:center">{{project.sponsor}}</td>
+      <td style="text-align:center">{{project.directorate}}</td>
+      <td style="text-align:center">{{project.timeline}}</td>
+      <td style="text-align:center">{{project.cost}}</td>
+    </tr> 
+      {% endfor %}
+   </tbody>
+  </table>
+</div>
+<div class="container" style="padding:10px 0px">
+<form>
+<button type="submit" class="btn btn-primary"><a href="{% url 'project_new' %}">Submit a new use case</a></button>
+</div>
+</form>
+{% endblock %}
