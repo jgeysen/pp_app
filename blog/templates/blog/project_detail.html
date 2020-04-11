@@ -1,5 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+<div>
+<div class="date" style="float:right">
+   {{ project.published_date }}
+</div>
 <h2>Detailed view of use case: {{project.use_case_name}}</h2>
 <p>
 {{project.description}}
@@ -64,4 +68,15 @@ Delivery alignment strategy
 <p>
 {{project.strat_deliver}}
 </p>
+<h4>
+Comments
+</h4>
+<p>
+{{project.comments}}
+</p>
+<form method="post">
+{% csrf_token %}
+<button type="submit"  class="btn btn-primary">Delete use case</button>
+</form>
+</div>
 {% endblock %}

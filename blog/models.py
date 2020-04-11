@@ -26,6 +26,7 @@ COST_CHOICES = [('0 - 50,000','£0 - £50,000'),
 
 
 class Project_gate_1(models.Model):
+    published_date = models.DateTimeField(blank=True, null=True)
     date = models.DateTimeField(default=timezone.now)
     identifier = models.CharField(max_length=8)
     use_case_name = models.CharField(max_length = 50)
@@ -40,6 +41,7 @@ class Project_gate_1(models.Model):
     strat_customer = models.TextField()
     strat_safety = models.TextField()
     strat_deliver = models.TextField()
+    comments = models.TextField()
 
     def publish(self):
         self.published_date = timezone.now()

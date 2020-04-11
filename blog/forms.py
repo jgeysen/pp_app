@@ -58,7 +58,7 @@ USE_CHOICES = [('Productivity increase','Productivity increase'),
 class PostForm(forms.ModelForm):
     class Meta:
         model = Project_gate_1
-        fields = ('use_case_name','identifier','description','owner','sponsor','directorate','timeline','cost','use_case_benefits','stake_benefits','strat_customer','strat_safety','strat_deliver')
+        fields = ('use_case_name','identifier','description','owner','sponsor','directorate','timeline','cost','use_case_benefits','stake_benefits','strat_customer','strat_safety','strat_deliver','comments')
     
     identifier = forms.CharField(max_length=8,widget=forms.TextInput(attrs={'style':'width:30ch'}))
     use_case_name = forms.CharField(max_length = 50,widget=forms.TextInput(attrs={'style':'width:30ch'}))
@@ -73,3 +73,4 @@ class PostForm(forms.ModelForm):
     strat_customer = forms.CharField(max_length = 250,label="Describe how the use case aligns to Highways England's strategic customer imperative:",widget=forms.TextInput(attrs={'style':'height:10ch'}))
     strat_safety = forms.CharField(max_length=250,label="Describe how the use case aligns to Highways England's strategic safety imperative:",widget=forms.TextInput(attrs={"style":"height:10ch"}))
     strat_deliver = forms.CharField(max_length=250,label="Describe how the use case aligns to Highways England's strategic delivery imperative:",widget=forms.TextInput(attrs={"style":"height:10ch"}))
+    comments = forms.TextInput()
