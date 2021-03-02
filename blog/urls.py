@@ -5,4 +5,6 @@ urlpatterns = [
     path('',views.project_list,name='project_list'),
     path('project/<int:pk>/',views.project_detail,name='project_detail'),
     path('project/new/',views.project_new,name='project_new'),
+    path('landing',views.landing,name='landing'),
+    path('dashboard',views.dashboard,name='dashboard'),
 ]

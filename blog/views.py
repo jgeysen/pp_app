@@ -30,3 +30,12 @@ def project_new(request):
     else:
         form = PostForm()
     return render(request,'blog/project_edit.html',{'form':form})
+
+
+def landing(request):
+    projects = Project_gate_1.objects.all()
+    return render(request,'blog/landing.html',{'projects':projects})
+
+def dashboard(request):
+    projects = Project_gate_1.objects.all()
+    return render(request,'blog/dashboard.html',{'projects':projects})
